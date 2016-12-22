@@ -5,18 +5,45 @@ export class Layout extends HTMLElement {
 	}
 
 	createdCallback() {
+		let classAttribute = this.getAttribute('class') || '';
+		classAttribute = `class="${classAttribute} mdl-layout mdl-js-layout"`;
+
 		let title = this.getAttribute('title') || '';
+		var el = document.createElement('html');
+		el.innerHTML = this.innerHTML;
+		let navContent = el.querySelector('mdl-navigation').outerHTML;
+		let layoutContent = el.querySelector('mdl-layout-content').outerHTML;
+		this.outerHTML =
+			`<div ${classAttribute}>
+				<header class="mdl-layout__header mdl-layout__header--transparent">
+					<div class="mdl-layout__header-row">
+						<span class="mdl-layout-title">${title}</span>
+						<div class="mdl-layout-spacer"></div>
+						${navContent}
+					</div>
+				</header>
+				<div class="mdl-layout__drawer">
+					<span class="mdl-layout-title">${title}</span>
+					${navContent}
+				</div>
+				${layoutContent}
+			</div>`;
+	}
+}
+
+export class LayoutContent extends HTMLElement {
+
+	constructor() {
+		super();
+	}
+
+	createdCallback() {
 		let content = this.innerHTML;
 
 		this.outerHTML =
-			`<div class="mdl-layout mdl-js-layout">
-				<header class="mdl-layout__header mdl-layout__header--transparent">
-					<div class="mdl-layout__header-row">
-						<span class=mdl-layout-title>${title}</span>
-					</div>
-					<div class="mdl-layout-spacer"></div>
-				</header>
-			</div>`;
+			`<main class="mdl-layout__content">
+				${content}
+			</main>`;
 	}
 }
 
@@ -43,10 +70,12 @@ export class NavigationLink extends HTMLElement {
 	}
 
 	createdCallback() {
-		let title = this.getAttribute('title') || '';
 		let href = this.getAttribute('href') || '#';
+		let content = this.innerHTML;
 
 		this.outerHTML =
-			`<a class="mdl-navigation__link" href="${href}">${title}</a>`;
+			`<a class="mdl-navigation__link" href="${href}">${content}</a>`;
 	}
 }
+
+
