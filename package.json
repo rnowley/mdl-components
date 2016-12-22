@@ -1,0 +1,31 @@
+{
+  "name": "mdl-components",
+  "version": "1.0.0",
+  "description": "Provides custom elements for the Material Design Lite CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnowley/mdl-components.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rnowley/mdl-components/issues"
+  },
+  "homepage": "https://github.com/rnowley/mdl-components#readme",
+  "dependencies": {
+    "material-design-lite": "^1.3.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.36.4",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
+  }
+}
