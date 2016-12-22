@@ -16,6 +16,11 @@ export default {
             browser: true,
         }),
         commonjs(),
+		eslint({
+ 			exclude: [
+	 			'src/styles/**',
+            ]
+        }),
         replace({
             exclude: 'node_modules/**',
             ENV: JSON.stringify(process.env.NODE_ENV || 'development'),

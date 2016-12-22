@@ -2,33 +2,21 @@
 <html>
   <head>
     <link rel="stylesheet" href="../node_modules/material-design-lite/material.min.css">
-    <script src="../node_modules/material-design-lite/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-    <style>
-.demo-layout-transparent {
-  background: url('https://getmdl.io/assets/demos/transparent.jpg') center / cover;
-}
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white;
-}
-</style>
-    <mdl-layout class="demo-layout-transparent" title="Title">
+    <mdl-fixed-drawer-layout title="Title">
       <mdl-navigation>
         <mdl-navigation-link>Link</mdl-navigation-link>
-          <mdl-navigation-link>Link</mdl-navigation-link>
-          <mdl-navigation-link>Link</mdl-navigation-link>
-          <mdl-navigation-link>Link</mdl-navigation-link>
-          <mdl-navigation-link>Link</mdl-navigation-link>
+        <mdl-navigation-link>Link</mdl-navigation-link>
+        <mdl-navigation-link>Link</mdl-navigation-link>
+        <mdl-navigation-link>Link</mdl-navigation-link>
+        <mdl-navigation-link>Link</mdl-navigation-link>
       </mdl-navigation>
       <mdl-layout-content>
         <h1>Content<h1/>
       </mdl-layout-content>
-    </mdl-layout>
+    </mdl-fixed-drawer-layout>
     <script src="../node_modules/material-design-lite/material.min.js"></script>
     <script src="../build/js/mdl-components.min.js"></script>
   </body>
