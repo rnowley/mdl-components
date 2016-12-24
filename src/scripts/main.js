@@ -1,6 +1,8 @@
 import {TransparentHeaderLayout, FixedDrawerLayout, FixedHeaderLayout, 
         ScrollingHeaderLayout, WaterfallHeaderLayout, ScrollableTabLayout, LayoutContent, 
         Navigation, NavigationLink, TabBar, Tab, TabPanel, PageContent} from './modules/layout';
+import {Slider} from './modules/slider';
+import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -15,3 +17,8 @@ document.registerElement('mdl-tab-bar', TabBar);
 document.registerElement('mdl-tab', Tab);
 document.registerElement('mdl-tab-panel', TabPanel);
 document.registerElement('mdl-page-content', PageContent);
+document.registerElement('mdl-slider', Slider);
+document.registerElement('mdl-check-box', Checkbox);
+document.registerElement('mdl-icon-toggle', IconToggle);
+document.registerElement('mdl-radio-button', RadioButton);
+document.registerElement('mdl-switch', Switch);
