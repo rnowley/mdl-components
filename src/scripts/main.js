@@ -3,6 +3,7 @@ import {TransparentHeaderLayout, FixedDrawerLayout, FixedHeaderLayout,
         Navigation, NavigationLink, TabBar, Tab, TabPanel, PageContent} from './modules/layout';
 import {Slider} from './modules/slider';
 import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
+import {FlatButton, FloatingActionButton, RaisedButton} from './modules/button';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -22,3 +23,6 @@ document.registerElement('mdl-check-box', Checkbox);
 document.registerElement('mdl-icon-toggle', IconToggle);
 document.registerElement('mdl-radio-button', RadioButton);
 document.registerElement('mdl-switch', Switch);
+document.registerElement('mdl-flat-button', FlatButton);
+document.registerElement('mdl-fab', FloatingActionButton);
+document.registerElement('mdl-raised-button', RaisedButton);
