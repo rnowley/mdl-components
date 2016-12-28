@@ -91,6 +91,94 @@ export class FloatingActionButton extends HTMLElement {
 
 }
 
+export class IconButton extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let classAttribute = 'mdl-button mdl-js-button mdl-button--icon ';
+        let attributeList = '';
+        let icon = '';
+
+        for (const attribute of this.attributes) {
+
+            switch (attribute.name) {
+            case 'icon':
+                icon = attribute.value;
+                continue;
+            case 'coloured':
+            case 'colored':
+                classAttribute += 'mdl-button--colored ';
+                continue;
+            case 'class':
+                classAttribute += attribute.value + ' ';
+                continue;
+            case 'ripple':
+                classAttribute += 'mdl-js-ripple-effect ';
+                continue;
+            }
+
+            if (attribute.value === '') {
+                attributeList += attribute.name + ' ';
+            } else {
+                attributeList += `${attribute.name}="${attribute.value}" `;
+            }
+
+        }
+
+        classAttribute = `class="${classAttribute}" `;
+        attributeList = classAttribute + attributeList;
+
+        this.outerHTML =
+            `<button ${attributeList}>
+                <i class="material-icons">${icon}</i>
+             </button>`;
+    }
+}
+
+export class MiniFloatingActionButton extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let classAttribute = 'mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab ';
+        let attributeList = '';
+        let icon = '';
+
+        for (const attribute of this.attributes) {
+
+            switch (attribute.name) {
+            case 'icon':
+                icon = attribute.value;
+                continue;
+            case 'coloured':
+            case 'colored':
+                classAttribute += 'mdl-button--colored ';
+                continue;
+            }
+
+            if (attribute.value === '') {
+                attributeList += attribute.name + ' ';
+            } else {
+                attributeList += `${attribute.name}="${attribute.value}" `;
+            }
+
+        }
+
+        classAttribute = `class="${classAttribute}" `;
+        attributeList = classAttribute + attributeList;
+
+        this.outerHTML =
+            `<button ${attributeList}>
+                <i class="material-icons">${icon}</i>
+             </button>`;
+    }
+}
+
 export class RaisedButton extends HTMLElement {
 
     constructor() {
