@@ -4,7 +4,7 @@ import {TransparentHeaderLayout, FixedDrawerLayout, FixedHeaderLayout,
 import {Slider} from './modules/slider';
 import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
 import {FlatButton, FloatingActionButton, IconButton, MiniFloatingActionButton, RaisedButton} from './modules/button';
-import {Card, CardAction, CardActions, CardMenu, SupportingText} from './modules/card';
+import {Card, CardAction, CardActions, CardMenu, CardTitle, EventCard, Icon, ImageCard, LayoutSpacer, SupportingText} from './modules/card';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -33,4 +33,9 @@ document.registerElement('mdl-card', Card);
 document.registerElement('mdl-card-action', CardAction);
 document.registerElement('mdl-card-actions', CardActions);
 document.registerElement('mdl-card-menu', CardMenu);
+document.registerElement('mdl-card-title', CardTitle);
+document.registerElement('mdl-event-card', EventCard);
+document.registerElement('mdl-icon', Icon);
+document.registerElement('mdl-image-card', ImageCard);
+document.registerElement('mdl-layout-spacer', LayoutSpacer);
 document.registerElement('mdl-supporting-text', SupportingText);
