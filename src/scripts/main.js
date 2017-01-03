@@ -5,6 +5,7 @@ import {Slider} from './modules/slider';
 import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
 import {FlatButton, FloatingActionButton, IconButton, MiniFloatingActionButton, RaisedButton} from './modules/button';
 import {Card, CardAction, CardActions, CardMenu, CardTitle, EventCard, Icon, ImageCard, LayoutSpacer, SupportingText} from './modules/card';
+import {ButtonChip, Chip, ContactChip, DeletableChip, DeletableContactChip} from './modules/chip';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -39,3 +40,8 @@ document.registerElement('mdl-icon', Icon);
 document.registerElement('mdl-image-card', ImageCard);
 document.registerElement('mdl-layout-spacer', LayoutSpacer);
 document.registerElement('mdl-supporting-text', SupportingText);
+document.registerElement('mdl-button-chip', ButtonChip);
+document.registerElement('mdl-chip', Chip);
+document.registerElement('mdl-contact-chip', ContactChip);
+document.registerElement('mdl-deletable-chip', DeletableChip);
+document.registerElement('mdl-deletable-contact-chip', DeletableContactChip);
