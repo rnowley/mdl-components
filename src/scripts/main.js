@@ -6,6 +6,9 @@ import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
 import {FlatButton, FloatingActionButton, IconButton, MiniFloatingActionButton, RaisedButton} from './modules/button';
 import {Card, CardAction, CardActions, CardMenu, CardTitle, EventCard, Icon, ImageCard, LayoutSpacer, SupportingText} from './modules/card';
 import {ButtonChip, Chip, ContactChip, DeletableChip, DeletableContactChip} from './modules/chip';
+import {ActionList, ActionListItem, List, ListItem, ListItemIconAction,
+        ListItemAvatar, ListItemIcon, ListItemPrimaryContent, ListItemSecondaryAction,
+        ListItemSecondaryContent, ListItemSecondaryInformation, ListItemSubTitle, ListItemTextBody} from './modules/list';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -45,3 +48,16 @@ document.registerElement('mdl-chip', Chip);
 document.registerElement('mdl-contact-chip', ContactChip);
 document.registerElement('mdl-deletable-chip', DeletableChip);
 document.registerElement('mdl-deletable-contact-chip', DeletableContactChip);
+document.registerElement('mdl-action-list', ActionList);
+document.registerElement('mdl-action-list-item', ActionListItem);
+document.registerElement('mdl-list', List);
+document.registerElement('mdl-list-item', ListItem);
+document.registerElement('mdl-li-icon-action', ListItemIconAction);
+document.registerElement('mdl-list-item-avatar', ListItemAvatar);
+document.registerElement('mdl-list-item-icon', ListItemIcon);
+document.registerElement('mdl-li-primary-content', ListItemPrimaryContent);
+document.registerElement('mdl-li-secondary-action', ListItemSecondaryAction);
+document.registerElement('mdl-li-secondary-content', ListItemSecondaryContent);
+document.registerElement('mdl-li-secondary-info', ListItemSecondaryInformation);
+document.registerElement('mdl-li-sub-title', ListItemSubTitle);
+document.registerElement('mdl-li-text-body', ListItemTextBody);
