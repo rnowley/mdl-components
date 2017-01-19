@@ -11,6 +11,8 @@ import {ActionList, ActionListItem, List, ListItem, ListItemIconAction,
         ListItemSecondaryContent, ListItemSecondaryInformation, ListItemSubTitle, ListItemTextBody} from './modules/list';
 import {SnackBar} from './modules/snackbar';
 import {ProgressBar, Spinner} from './modules/loading';
+import {Menu, MenuItem} from './modules/menu';
+import {DivTooltip, PTooltip, SpanTooltip} from './modules/tooltip';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -66,3 +68,8 @@ document.registerElement('mdl-li-text-body', ListItemTextBody);
 document.registerElement('mdl-snackbar', SnackBar);
 document.registerElement('mdl-progress', ProgressBar);
 document.registerElement('mdl-spinner', Spinner);
+document.registerElement('mdl-menu', Menu);
+document.registerElement('mdl-menu-item', MenuItem);
+document.registerElement('mdl-div-tooltip', DivTooltip);
+document.registerElement('mdl-p-tooltip', PTooltip);
+document.registerElement('mdl-span-tooltip', SpanTooltip);
