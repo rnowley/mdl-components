@@ -10,7 +10,7 @@ import {ActionList, ActionListItem, List, ListItem, ListItemIconAction,
         ListItemAvatar, ListItemIcon, ListItemPrimaryContent, ListItemSecondaryAction,
         ListItemSecondaryContent, ListItemSecondaryInformation, ListItemSubTitle, ListItemTextBody} from './modules/list';
 import {SnackBar} from './modules/snackbar';
-import {ProgressBar} from './modules/loading';
+import {ProgressBar, Spinner} from './modules/loading';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -65,3 +65,4 @@ document.registerElement('mdl-li-sub-title', ListItemSubTitle);
 document.registerElement('mdl-li-text-body', ListItemTextBody);
 document.registerElement('mdl-snackbar', SnackBar);
 document.registerElement('mdl-progress', ProgressBar);
+document.registerElement('mdl-spinner', Spinner);
