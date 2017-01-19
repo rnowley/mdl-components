@@ -1,5 +1,5 @@
-import {TransparentHeaderLayout, FixedDrawerLayout, FixedHeaderLayout, 
-        ScrollingHeaderLayout, WaterfallHeaderLayout, ScrollableTabLayout, LayoutContent, 
+import {TransparentHeaderLayout, FixedDrawerLayout, FixedHeaderLayout,
+        ScrollingHeaderLayout, WaterfallHeaderLayout, ScrollableTabLayout, LayoutContent,
         Navigation, NavigationLink, TabBar, Tab, TabPanel, PageContent} from './modules/layout';
 import {Slider} from './modules/slider';
 import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
@@ -9,6 +9,8 @@ import {ButtonChip, Chip, ContactChip, DeletableChip, DeletableContactChip} from
 import {ActionList, ActionListItem, List, ListItem, ListItemIconAction,
         ListItemAvatar, ListItemIcon, ListItemPrimaryContent, ListItemSecondaryAction,
         ListItemSecondaryContent, ListItemSecondaryInformation, ListItemSubTitle, ListItemTextBody} from './modules/list';
+import {SnackBar} from './modules/snackbar';
+import {ProgressBar} from './modules/loading';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -61,3 +63,5 @@ document.registerElement('mdl-li-secondary-content', ListItemSecondaryContent);
 document.registerElement('mdl-li-secondary-info', ListItemSecondaryInformation);
 document.registerElement('mdl-li-sub-title', ListItemSubTitle);
 document.registerElement('mdl-li-text-body', ListItemTextBody);
+document.registerElement('mdl-snackbar', SnackBar);
+document.registerElement('mdl-progress', ProgressBar);
