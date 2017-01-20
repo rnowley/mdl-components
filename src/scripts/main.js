@@ -14,6 +14,7 @@ import {ProgressBar, Spinner} from './modules/loading';
 import {Menu, MenuItem} from './modules/menu';
 import {DivTooltip, PTooltip, SpanTooltip} from './modules/tooltip';
 import {ExpandingTextField, TextField, TextArea} from './modules/textfield';
+import {Dialog, DialogActions, DialogContent, DialogTitle} from './modules/dialog';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -77,3 +78,7 @@ document.registerElement('mdl-span-tooltip', SpanTooltip);
 document.registerElement('mdl-text', TextField);
 document.registerElement('mdl-textarea', TextArea);
 document.registerElement('mdl-text-expand', ExpandingTextField);
+document.registerElement('mdl-dialog', Dialog);
+document.registerElement('mdl-dialog-actions', DialogActions);
+document.registerElement('mdl-dialog-content', DialogContent);
+document.registerElement('mdl-dialog-title', DialogTitle);

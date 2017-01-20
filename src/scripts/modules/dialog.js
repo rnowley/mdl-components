@@ -7,14 +7,10 @@ export class Dialog extends HTMLElement {
     createdCallback() {
         let classAttribute = 'mdl-dialog ';
         let attributeList = '';
-        let title = '';
 
         for (const attribute of this.attributes) {
 
             switch (attribute.name) {
-            case 'title':
-                title = attribute.value;
-                continue;
             case 'class':
                 classAttribute += attribute.value + ' ';
                 continue;
@@ -35,10 +31,36 @@ export class Dialog extends HTMLElement {
 
         this.outerHTML =
             `<dialog ${attributeList}>
-                <h4 class="mdl-dialog__title">${title}</h4>
                 ${content}
              </dialog>`;
     }
+}
+
+export class DialogActions extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let classAttribute = 'mdl-dialog__actions ';
+
+        for (const attribute of this.attributes) {
+
+            if (attribute.name === 'full-width') {
+                classAttribute += 'mdl-dialog__actions--full-width ';
+            }
+        }
+
+        classAttribute = `class="${classAttribute}"`;
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div ${classAttribute}>
+                 ${content}
+             </div>`;
+    }
+
 }
 
 export class DialogContent extends HTMLElement {
@@ -48,6 +70,27 @@ export class DialogContent extends HTMLElement {
     }
 
     createdCallback() {
+        let content = this.innerHTML;
 
+        this.outerHTML =
+            `<div class="mdl-dialog__content">
+                ${content}
+             </div>`;
     }
+
+}
+
+export class DialogTitle extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<h4 class="mdl-dialog__title">${content}</h4>`;
+    }
+
 }
