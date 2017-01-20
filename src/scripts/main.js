@@ -13,7 +13,7 @@ import {SnackBar} from './modules/snackbar';
 import {ProgressBar, Spinner} from './modules/loading';
 import {Menu, MenuItem} from './modules/menu';
 import {DivTooltip, PTooltip, SpanTooltip} from './modules/tooltip';
-import {TextField} from './modules/textfield';
+import {ExpandingTextField, TextField, TextArea} from './modules/textfield';
 
 document.registerElement('mdl-transparent-header-layout', TransparentHeaderLayout);
 document.registerElement('mdl-fixed-drawer-layout', FixedDrawerLayout);
@@ -75,3 +75,5 @@ document.registerElement('mdl-div-tooltip', DivTooltip);
 document.registerElement('mdl-p-tooltip', PTooltip);
 document.registerElement('mdl-span-tooltip', SpanTooltip);
 document.registerElement('mdl-text', TextField);
+document.registerElement('mdl-textarea', TextArea);
+document.registerElement('mdl-text-expand', ExpandingTextField);
