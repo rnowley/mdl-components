@@ -86,7 +86,7 @@ export class FixedHeaderLayout extends HTMLElement {
         let navContent = el.querySelector('mdl-navigation').outerHTML;
         let navLinks = el.querySelector('mdl-navigation').innerHTML;
         let layoutContent = el.querySelector('mdl-layout-content').outerHTML;
-        
+
         this.outerHTML =
             `<div ${classAttribute}>
                 <header class="mdl-layout__header">
@@ -216,7 +216,7 @@ export class ScrollableTabLayout extends HTMLElement {
     }
 }
 
-export class TabBar extends HTMLElement {
+export class LayoutTabBar extends HTMLElement {
 
     constructor() {
         super();
@@ -232,7 +232,7 @@ export class TabBar extends HTMLElement {
     }
 }
 
-export class Tab extends HTMLElement {
+export class LayoutTab extends HTMLElement {
 
     constructor() {
         super();
@@ -251,7 +251,7 @@ export class Tab extends HTMLElement {
     }
 }
 
-export class TabPanel extends HTMLElement {
+export class LayoutTabPanel extends HTMLElement {
     constructor() {
         super();
     }
@@ -319,4 +319,245 @@ export class NavigationLink extends HTMLElement {
     }
 }
 
+export class Tabs extends HTMLElement {
 
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let classAttribute = 'mdl-tabs mdl-js-tabs ';
+
+        for (const attribute of this.attributes) {
+
+            switch (attribute.name) {
+            case 'ripple':
+                classAttribute += 'mdl-js-ripple-effect ';
+                continue;
+            }
+
+        }
+
+        classAttribute = `class="${classAttribute}" `;
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div ${classAttribute}>
+                ${content}
+             </div>`;
+    }
+}
+
+export class TabBar extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div class="mdl-tabs__tab-bar">
+                ${content}
+             </div>`;
+    }
+}
+
+export class Tab extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let classAttribute = 'mdl-tabs__tab ';
+        let attributeList = '';
+
+        for (const attribute of this.attributes) {
+
+            switch (attribute.name) {
+            case 'active':
+                classAttribute += 'is-active ';
+                continue;
+            }
+
+            if (attribute.value === '') {
+                attributeList += attribute.name + ' ';
+            } else {
+                attributeList += `${attribute.name}="${attribute.value}" `;
+            }
+
+        }
+
+        classAttribute = `class="${classAttribute}" `;
+        attributeList = classAttribute + attributeList;
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<a ${attributeList}>${content}</a>`;
+    }
+}
+
+export class TabPanel extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let classAttribute = 'mdl-tabs__panel ';
+        let attributeList = '';
+
+        for (const attribute of this.attributes) {
+
+            switch (attribute.name) {
+            case 'active':
+                classAttribute += 'is-active ';
+                continue;
+            }
+
+            if (attribute.value === '') {
+                attributeList += attribute.name + ' ';
+            } else {
+                attributeList += `${attribute.name}="${attribute.value}" `;
+            }
+
+        }
+
+        classAttribute = `class="${classAttribute}" `;
+        attributeList = classAttribute + attributeList;
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div ${attributeList}>
+                ${content}
+            </div>`;
+    }
+}
+
+export class MegaFooter extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<footer class="mdl-mega-footer">
+                ${content}
+             </footer>`;
+    }
+}
+
+export class FooterLogo extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div class="mdl-logo">
+                ${content}
+             </div>`;
+    }
+}
+
+export class FooterMiddleSection extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div class="mdl-mega-footer__middle-section">
+                ${content}
+             </div>`;
+    }
+}
+
+export class FooterBottomSection extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        var el = document.createElement('html');
+        el.innerHTML = this.innerHTML;
+        let logoContent = el.querySelector('.mdl-logo').outerHTML;
+        let content = el.querySelector('mdl-footer-list-contents').innerHTML;
+
+        this.outerHTML =
+            `<div class="mdl-mega-footer__bottom-section">
+                ${logoContent}
+                <ul class="mdl-mega-footer__link-list">
+                    ${content}
+                </ul>
+             </div>`;
+    }
+}
+
+export class FooterDropDownSection extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        let heading = '';
+
+        for (const attribute of this.attributes) {
+
+            if (attribute.name === 'heading') {
+                heading = attribute.value;
+            }
+
+        }
+
+        let content = this.innerHTML;
+
+        this.outerHTML =
+            `<div class="mdl-mega-footer__drop-down-section">
+                 <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                 <h1 class="mdl-mega-footer__heading">${heading}</h1>
+                 <ul class="mdl-mega-footer__link-list">
+                    ${content}
+                 </ul>
+             </div>`;
+    }
+
+}
+
+export class MiniFooter extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    createdCallback() {
+        var el = document.createElement('html');
+        el.innerHTML = this.innerHTML;
+        let logoContent = el.querySelector('.mdl-logo').outerHTML;
+        let content = el.querySelector('mdl-footer-list-contents').innerHTML;
+
+        this.outerHTML =
+            `<footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    ${logoContent}
+                    <ul class="mdl-mini-footer__link-list">
+                        ${content}
+                    </ul>
+                </div>
+             </footer>`;
+    }
+
+}

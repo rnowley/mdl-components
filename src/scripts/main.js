@@ -1,6 +1,9 @@
 import {TransparentHeaderLayout, FixedDrawerLayout, FixedHeaderLayout,
         ScrollingHeaderLayout, WaterfallHeaderLayout, ScrollableTabLayout, LayoutContent,
-        Navigation, NavigationLink, TabBar, Tab, TabPanel, PageContent} from './modules/layout';
+        Navigation, NavigationLink, LayoutTabBar, LayoutTab, LayoutTabPanel, PageContent,
+        Tabs, TabBar, Tab, TabPanel, MegaFooter, FooterLogo, FooterMiddleSection, FooterBottomSection,
+        FooterDropDownSection, MiniFooter
+} from './modules/layout';
 import {Slider} from './modules/slider';
 import {Checkbox, IconToggle, RadioButton, Switch} from './modules/toggle';
 import {FlatButton, FloatingActionButton, IconButton, MiniFloatingActionButton, RaisedButton} from './modules/button';
@@ -25,9 +28,9 @@ document.registerElement('mdl-scrollable-tab-layout', ScrollableTabLayout);
 document.registerElement('mdl-layout-content', LayoutContent);
 document.registerElement('mdl-navigation', Navigation);
 document.registerElement('mdl-navigation-link', NavigationLink);
-document.registerElement('mdl-tab-bar', TabBar);
-document.registerElement('mdl-tab', Tab);
-document.registerElement('mdl-tab-panel', TabPanel);
+document.registerElement('mdl-layout-tab-bar', LayoutTabBar);
+document.registerElement('mdl-layout-tab', LayoutTab);
+document.registerElement('mdl-layout-tab-panel', LayoutTabPanel);
 document.registerElement('mdl-page-content', PageContent);
 document.registerElement('mdl-slider', Slider);
 document.registerElement('mdl-check-box', Checkbox);
@@ -82,3 +85,13 @@ document.registerElement('mdl-dialog', Dialog);
 document.registerElement('mdl-dialog-actions', DialogActions);
 document.registerElement('mdl-dialog-content', DialogContent);
 document.registerElement('mdl-dialog-title', DialogTitle);
+document.registerElement('mdl-tabs', Tabs);
+document.registerElement('mdl-tab-bar', TabBar);
+document.registerElement('mdl-tab', Tab);
+document.registerElement('mdl-tab-panel', TabPanel);
+document.registerElement('mdl-mega-footer', MegaFooter);
+document.registerElement('mdl-logo', FooterLogo);
+document.registerElement('mdl-mega-footer-middle', FooterMiddleSection);
+document.registerElement('mdl-mega-footer-bottom', FooterBottomSection);
+document.registerElement('mdl-mega-footer-dropdown', FooterDropDownSection);
+document.registerElement('mdl-mini-footer', MiniFooter);

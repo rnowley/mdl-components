@@ -30,9 +30,9 @@ export class Dialog extends HTMLElement {
         let content = this.innerHTML;
 
         this.outerHTML =
-            `<dialog ${attributeList}>
-                ${content}
-             </dialog>`;
+        `<dialog ${attributeList}>
+            ${content}
+         </dialog>`;
     }
 }
 
@@ -50,6 +50,7 @@ export class DialogActions extends HTMLElement {
             if (attribute.name === 'full-width') {
                 classAttribute += 'mdl-dialog__actions--full-width ';
             }
+
         }
 
         classAttribute = `class="${classAttribute}"`;
@@ -57,7 +58,7 @@ export class DialogActions extends HTMLElement {
 
         this.outerHTML =
             `<div ${classAttribute}>
-                 ${content}
+                    ${content}
              </div>`;
     }
 
@@ -75,7 +76,7 @@ export class DialogContent extends HTMLElement {
         this.outerHTML =
             `<div class="mdl-dialog__content">
                 ${content}
-             </div>`;
+            </div>`;
     }
 
 }
